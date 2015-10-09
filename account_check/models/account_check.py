@@ -86,7 +86,7 @@ class account_check(osv.osv):
         'source_partner_id': fields.function(_get_source_partner, relation='res.partner', type="many2one", string='Source Partner',),
         'customer_reject_debit_note_id': fields.many2one('account.invoice','Customer Reject Debit Note', readonly=True,),
         'bank_id': fields.many2one('res.bank', 'Bank', readonly=True, states={'draft': [('readonly', False)]}),
-        'vat': fields.char('Vat', size=11, states={'draft': [('readonly', False)]}),
+        'vat': fields.char('Vat', states={'draft': [('readonly', False)]}),
         'deposit_account_move_id': fields.many2one('account.move','Deposit Account Move', readonly=True),
         # this one is used for check rejection
         'deposit_account_id': fields.many2one('account.account','Deposit Account', readonly=True),
