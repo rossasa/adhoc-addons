@@ -22,5 +22,5 @@ Add Fields on Partners Views
     ],
     "installable": True,
     "active": False,
-    'auto_install': True,
+    'auto_install': False,
 }

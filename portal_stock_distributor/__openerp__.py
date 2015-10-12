@@ -39,7 +39,7 @@ Portal Stock Distributor Sale
         'security/ir.model.access.csv',
         'portal_sale_view.xml',
     ],
-    'auto_install': True,
+    'auto_install': False,
     'category': 'Hidden',
 }
 
