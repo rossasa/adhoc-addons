@@ -22,7 +22,7 @@ class account_check_action(models.TransientModel):
 
     account_id = fields.Many2one(
         'account.account', 'Account',
-        domain=[('type', 'in', ['other', 'liquidity'])])
+        domain=[('type', 'in', ['other', 'liquidity', 'payable', 'receivable'])]) #I added payable and receivable to work with our way of work
     date = fields.Date(
         'Debit Date', required=True, default=fields.Date.context_today)
     action_type = fields.Char(
