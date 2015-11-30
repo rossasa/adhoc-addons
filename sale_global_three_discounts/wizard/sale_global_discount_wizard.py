@@ -21,26 +21,23 @@ class sale_global_discount_wizard(models.TransientModel):
     #     default='percentage',
     #     )
     discount1 = fields.Boolean(
-        'Discount 1'
+        string='Discount 1'
     )
     discount2 = fields.Boolean(
-        'Discount 2'
+        string='Discount 2'
     )
     discount3 = fields.Boolean(
-        'Discount 3'
+        string='Discount 3'
     )
 
     discount1_amount = fields.Float(
-        '(%)',
-        required=True,
+        '(%)'
     )
     discount2_amount = fields.Float(
-        '(%)',
-        required=True,
+        '(%)'
     )
     discount3_amount = fields.Float(
-        '(%)',
-        required=True,
+        '(%)'
     )
     amount = fields.Float(
         required=False,
