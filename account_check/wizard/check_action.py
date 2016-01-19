@@ -28,16 +28,11 @@ class account_check_action(models.TransientModel):
         "('payment_subtype', 'not in', ['issue_check', 'third_check'])]"
         )
     account_id = fields.Many2one(
-<<<<<<< HEAD
-        'account.account', 'Account',
-        domain=[('type', 'in', ['other', 'liquidity', 'payable', 'receivable'])]) #I added payable and receivable to work with our way of work
-=======
         'account.account',
         'Account',
         domain="[('company_id','=',company_id), "
-        "('type', 'in', ('other', 'liquidity'))]"
+        "('type', 'in', ('other', 'liquidity', 'payable', 'receivable'))]"
         )
->>>>>>> upstream/8.0
     date = fields.Date(
         'Date', required=True, default=fields.Date.context_today
         )

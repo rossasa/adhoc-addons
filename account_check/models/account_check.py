@@ -230,9 +230,6 @@ class account_check(models.Model):
         related='voucher_id.journal_id.currency',
         )
     vat = fields.Char(
-<<<<<<< HEAD
-        'Vat', states={'draft': [('readonly', False)]} # Here I remove the limitation size=11
-=======
         # TODO rename to Owner VAT
         'Owner Vat',
         readonly=True,
@@ -242,7 +239,6 @@ class account_check(models.Model):
         'Owner Name',
         readonly=True,
         states={'draft': [('readonly', False)]}
->>>>>>> upstream/8.0
         )
     deposit_account_move_id = fields.Many2one(
         'account.move',
